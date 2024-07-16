@@ -7,20 +7,48 @@
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar2"
-        android:layout_width="414dp"
-        android:layout_height="43dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:background="#D79575CD"
         android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:title="Inicio"
+        app:titleTextAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    <TextView
+        android:id="@+id/bienvenida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¡Bienvenido!"
+        app:layout_constraintTop_toBottomOf="@id/toolbar2"
+        app:layout_constraintBottom_toTopOf="@id/detectar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/detectar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detectar Medicamento"
+        app:layout_constraintTop_toBottomOf="@id/bienvenida"
+        app:layout_constraintBottom_toTopOf="@id/historial"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.5" />
+
+    <Button
+        android:id="@+id/historial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Historial"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.473"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:titleMarginStart="8dp"
-        app:title="Inicio"
-        app:titleTextAppearance="@style/TextAppearance.AppCompat.Large"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@id/detectar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
